@@ -2,20 +2,19 @@
 <html>
 <head>
     <title>Todo List</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div id="todo-app">
-        <h1>Todo List</h1>
-        <form id="new-task-form">
-            <input type="text" id="new-task-name" placeholder="Task name">
-            <input type="text" id="new-subtask-name" placeholder="Subtask name">
-            <input type="text" id="new-task-note" placeholder="Add a note">
-            <input type="date" id="new-task-date">
-            <button type="submit">Add task</button>
-        </form>
-        <div id="task-list"></div>
+        <input type="text" id="todo-input" placeholder="请输入待办事项">
+        <input type="date" id="date-input">
+        <textarea id="description-input" placeholder="请输入任务描述"></textarea>
+        <button id="add-todo">添加</button>
+        <select id="sort-select">
+            <option value="asc">日期升序</option>
+            <option value="desc">日期降序</option>
+        </select>
+        <input type="text" id="search-input" placeholder="搜索待办事项">
+        <div id="todo-list"></div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
