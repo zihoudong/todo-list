@@ -25,7 +25,7 @@ function renderTodos() {
             }
         });
         dateItem.appendChild(dateTitle);
-        todos.filter(todo => todo.date === date && todo.text.includes(searchInput.value)).forEach(function(todo, index) {
+        todos.filter(todo => todo.date === date && todo.text.includes(searchInput.value)).forEach(function(todo) {
             var todoItem = document.createElement('div');
             todoItem.className = 'todo-item';
             var todoText = document.createElement('p');
@@ -42,6 +42,7 @@ function renderTodos() {
             deleteButton.textContent = '删除';
             deleteButton.addEventListener('click', function(event) {
                 event.stopPropagation();
+                var index = todos.indexOf(todo);
                 todos.splice(index, 1);
                 saveTodos();
                 renderTodos();
