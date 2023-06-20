@@ -11,6 +11,19 @@ document.getElementById('new-task-form').addEventListener('submit', function(eve
     var taskElement = document.createElement('div');
     taskElement.className = 'task';
 
+    var checkboxElement = document.createElement('input');
+    checkboxElement.type = 'checkbox';
+    checkboxElement.addEventListener('change', function() {
+        if (checkboxElement.checked) {
+            taskNameElement.style.textDecoration = 'line-through';
+            taskNameElement.style.color = '#aaa';
+        } else {
+            taskNameElement.style.textDecoration = 'none';
+            taskNameElement.style.color = '#000';
+        }
+    });
+    taskElement.appendChild(checkboxElement);
+
     var taskNameElement = document.createElement('div');
     taskNameElement.textContent = taskName;
     taskElement.appendChild(taskNameElement);
