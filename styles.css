@@ -1,0 +1,40 @@
+#todo-app {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#new-task-form {
+    margin-bottom: 20px;
+}
+
+#task-list .task {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#task-list .task .subtask {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+#task-list .task .note {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+#task-list .task .date {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+#task-list .task:not(:last-child) {
+    margin-bottom: 20px; /* double spacing between tasks of different months */
+}
+
+#task-list .task .week:not(:last-child) {
+    margin-bottom: 10px; /* single spacing between weeks within the same month */
+}
