@@ -1,15 +1,69 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-image: url(body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-image: url(http://img.sccnn.com/bimg/326/398.jpg);
+    background-repeat: repeat;
 }
 
 #todo-app {
     width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#new-task-form {
+    margin-bottom: 20px;
+}
+
+#task-list .task {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#task-list .task .subtask {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+#task-list .task .note {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+#task-list .task .date {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+#task-list .task:not(:last-child) {
+    margin-bottom: 30px; /* increase spacing between main tasks */
+}
+
+#task-list .task .week:not(:last-child) {
+    margin-bottom: 10px; /* single spacing between weeks within the same month */
+}
+); 
+    background-repeat: repeat;
+}
+
+#todo-app {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
